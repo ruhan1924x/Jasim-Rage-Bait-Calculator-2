@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100d18">
+  <meta name="description" content="Enter the JASIM.EXE Rage Bait Calculator.">
+  <title>JASIM.EXE — Rage Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game-shell">
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="JASIM EXE home">
+        <span class="brand-icon">J</span>
+        <span>JASIM<span class="brand-accent">.EXE</span></span>
+      </a>
+      <span class="status"><span class="status-dot"></span> RAGE SYSTEM ONLINE</span>
+    </header>
+
+    <!-- START SCREEN -->
+    <section id="startScreen" class="screen start-screen">
+      <div class="hero-badge">⚠ FRIENDSHIP STRESS TEST ⚠</div>
+      <p class="eyebrow">THE MOST UNNECESSARY TEST EVER</p>
+
+      <h1>JASIM<span class="accent">.EXE</span></h1>
+
+      <p class="hero-description">
+        Are you smarter than Jasim? Let's find out.
+        Your answers will be judged by a calculator
+        that absolutely should not be trusted.
+      </p>
+
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="hero-symbol">💀</div>
+        <span class="floating-symbol symbol-one">?</span>
+        <span class="floating-symbol symbol-two">!</span>
+        <span class="floating-symbol symbol-three">🔥</span>
+      </div>
+
+      <div class="start-info">
+        <span>10 QUESTIONS</span>
+        <span>3 CHOICES EACH</span>
+        <span>100% NON-SCIENTIFIC</span>
+      </div>
+
+      <button id="startButton" class="primary-button">
+        START THE TEST <span>→</span>
+      </button>
+
+      <p class="tiny-note">Proceed at your own emotional risk.</p>
+    </section>
+
+    <!-- QUIZ SCREEN -->
+    <section id="quizScreen" class="screen quiz-screen hidden">
+      <div class="quiz-heading">
+        <div>
+          <p class="eyebrow">THE INTERROGATION</p>
+          <h2>Answer carefully<span class="accent">.</span></h2>
+        </div>
+        <span id="questionCounter" class="question-counter">01 / 10</span>
+      </div>
+
+      <div class="progress-track">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+
+      <div class="question-card">
+        <div class="question-topline">
+          <span id="questionTag" class="question-tag">QUESTION 01</span>
+          <span>💀</span>
+        </div>
+
+        <h3 id="questionText">Are you smarter than Jasim?</h3>
+        <p class="question-hint">Choose ONE answer to continue.</p>
+
+        <div id="answerOptions" class="answer-options"></div>
+      </div>
+
+      <div class="quiz-footer">
+        <button id="backButton" class="secondary-button">← BACK</button>
+        <button id="nextButton" class="primary-button" disabled>
+          NEXT QUESTION →
+        </button>
+      </div>
+
+      <p class="tiny-note quiz-note">Your answers are stored only in this game session.</p>
+    </section>
+
+    <!-- CALCULATING SCREEN -->
+    <section id="loadingScreen" class="screen loading-screen hidden">
+      <div class="loading-icon">🔥</div>
+      <p class="eyebrow">PLEASE DO NOT INTERRUPT</p>
+      <h2 id="loadingTitle">Analyzing Jasim...</h2>
+      <p id="loadingMessage" class="hero-description">
+        Measuring friendship damage.
+      </p>
+      <div class="loading-track">
+        <div id="loadingBar" class="loading-bar"></div>
+      </div>
+      <p class="tiny-note">The science department has resigned.</p>
+    </section>
+
+    <!-- RESULT SCREEN -->
+    <section id="resultScreen" class="screen result-screen hidden">
+      <p class="eyebrow">OFFICIAL TOTALLY UNOFFICIAL RESULT</p>
+      <h2 id="resultHeading">CALCULATION COMPLETE</h2>
+
+      <div id="resultVisual" class="result-visual">
+        <div id="resultFallback" class="result-fallback">💀</div>
+        <img
+          id="resultImage"
+          class="result-image hidden"
+          src=""
+          alt="Jasim's rage reaction"
+        />
+        <span id="resultLevel" class="result-level">LEVEL 01</span>
+      </div>
+
+      <div class="score-panel">
+        <p>YOUR RAGE BAIT SCORE</p>
+        <div class="score-number"><span id="scoreValue">0</span><span>%</span></div>
+        <div class="score-track">
+          <div id="scoreBar" class="score-bar"></div>
+        </div>
+        <h3 id="resultTitle">CHILL MODE</h3>
+        <p id="resultCaption" class="result-caption"></p>
+      </div>
+
+      <p id="resultRange" class="result-range">RAGE LEVEL 01 / 10</p>
+
+      <div class="result-actions">
+        <button id="restartButton" class="primary-button">
+          PLAY AGAIN ↻
+        </button>
+        <button id="shareButton" class="secondary-button">
+          SHARE RESULT ↗
+        </button>
+      </div>
+
+      <p id="shareMessage" class="tiny-note" aria-live="polite"></p>
+      <p class="tiny-note">Score is for entertainment only. Friendship not guaranteed.</p>
+    </section>
+
+    <footer class="game-footer">
+      <span>JASIM.EXE © FRIENDSHIP LAB</span>
+      <span>BUILT FOR CHAOS 💜</span>
+    </footer>
+
+  </main>
+</body>
+</html>
